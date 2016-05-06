@@ -1,4 +1,6 @@
 
+对应的博客为: https://github.com/uniquejava/blog/issues/46
+
 ```sh
 npm init
 npm install jspm --save-dev
