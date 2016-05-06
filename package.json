@@ -8,6 +8,7 @@
   },
   "scripts": {
     "bundle": "jspm bundle app/main --minify --no-mangle --inject --skip-source-maps",
+    "all-in-one": "jspm bundle-sfx app/main --minify --no-mangle --skip-source-maps",
     "server": "jspm-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

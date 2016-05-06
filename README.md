@@ -30,6 +30,7 @@ jspm bundle app/main --minify --no-mangle --inject --skip-source-maps
 ```
 <script src="build.js"></script>
 ```
+4) 也可以在jspm bundle 命令中指定生成的文件名, 默认为build.js
 
 最终的index.html如下:
 ```html
@@ -48,3 +49,22 @@ jspm bundle app/main --minify --no-mangle --inject --skip-source-maps
 </body>
 </html>
 ```
+
+### 更绝: 打包成一个自执行的js文件.
+执行`jspm bundle-sfx app/main --minify --no-mangle --skip-source-maps`
+
+这样index.html可以精简成如下形式:
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script src="build.js"></script>
+</body>
+</html>
+```
+
+以上的打包命令我写到了package.json中, 执行`npm run all-in-one`即可.
